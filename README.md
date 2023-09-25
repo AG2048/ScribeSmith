@@ -10,7 +10,7 @@ The [report](docs/report/report.pdf) outlines an implementation of a **Generativ
 
 ## Contributors
 
-The group agrees that there were only slight differences in individual contribution proportions.
+The group agrees that there were only slight differences in individual contribution proportions, with names sorted by last name in alphabetical order.
 
 - Aniruddh Aragola ([Aniruddh00001](https://github.com/Aniruddh00001))
 - Nabeth Ghazi ([nabethg](https://github.com/nabethg))
