@@ -8,7 +8,55 @@ The [report](docs/report/report.pdf) outlines an implementation of a **Generativ
 |:--:|
 | *High-level overview of the ScribeSmith model* |
 
-## Contributors
+## Setup
+
+The easiest way to set up this project locally is to use [conda](https://docs.conda.io/en/latest/). Verify that conda installed properly and added to `PATH` by checking `conda --version`.
+
+To set up the conda environment, run:
+
+```bash
+conda env create -f environment.yml
+conda activate scribesmith
+```
+
+## `data/` File Structure
+
+As stated above, our training data is from the IAM Handwriting Database, available [here](https://fki.tic.heia-fr.ch/databases/download-the-iam-handwriting-database). To ensure proper data loading without error:
+
+- Download and unzip `data/ascii.tgz` and move only `lines.txt` into the `data/` folder
+- Download and unzip `data/lines.tgz` into `data/lines/`
+
+The end result should look something like this:
+
+```diff
+  ./
+  ├── data/
+  │   ├── chars/
+  │   │   ├── 02/
+  │   │   │   ⋮
+  │   │   └── 72/
++ │   ├── lines/
++ │   │   ├── a01/
++ │   │   │   ⋮
++ │   │   └── r06/
++ │   └── lines.txt
+```
+
+## `src/` File Structure
+
+To ensure the proper functionality of the Jupyter Notebook files, various subdirectories under `src/` must be created according to the file structure below (only directories shown):
+
+```diff
+  src/
++ ├── main_model/
++ │   ├── model_snapshots/
++ │   ├── model_training_information/
++ │   └── model_training_information_rawlist/
++ ├── recognizers/
+  └── shakespeare_demo_handwritten/
+```
+
+## Developers
 
 The group agrees that there were only slight differences in individual contribution proportions, with names sorted by last name in alphabetical order.
 
